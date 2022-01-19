@@ -12,6 +12,7 @@ use async_std::{stream, sync, task};
 use colored::*;
 use conformance_tests::vector::{MessageVector, Selector, TestVector, Variant};
 use conformance_tests::vm::{TestKernel, TestMachine};
+use conformance_tests::test_utils::*;
 use futures::{Future, StreamExt, TryFutureExt, TryStreamExt};
 use fvm::executor::{ApplyKind, DefaultExecutor, Executor};
 use fvm::machine::Machine;

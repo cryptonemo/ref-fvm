@@ -36,6 +36,7 @@ fn bench(c: &mut Criterion) {
     // TODO: this goes in a loop of benchmarks to run in the group!
     let vector_name = "test-vectors/corpus/specs_actors_v6/TestCronCatchedCCExpirationsAtDeadlineBoundary/c70afe9fa5e05990cac8ab8d4e49522919ad29e5be3f81ee4b59752c36c4a701-t0100-t0102-storageminer-6.json";
     let path = Path::new(vector_name).to_path_buf();
+    print!("{}\n", path);
     let file = File::open(&path).unwrap();
     let reader = BufReader::new(file);
     let vector: TestVector = serde_json::from_reader(reader).unwrap();
